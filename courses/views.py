@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse('E-courses app')
+
+def welcome(request): 
+    return HttpResponse("Hello")

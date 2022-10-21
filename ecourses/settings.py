@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'courses.apps.CoursesConfig',
+    'ckeditor',
+    'ckeditor_uploader',
+    'rest_framework',
 
 ]
 
@@ -124,8 +127,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#Giá trị của BASE_DIR sẽ được thay thế vào vị trí của %s
+#Thông thường giá trị mặc định của BASE_DIR chính là project
 MEDIA_ROOT = '%s/courses/static' % BASE_DIR
 
+CKEDITOR_UPLOAD_PATH = "lesson/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
