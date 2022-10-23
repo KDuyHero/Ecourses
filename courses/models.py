@@ -31,6 +31,7 @@ class ItemBase(models.Model):
 class Course(ItemBase):
     class Meta: 
         unique_together = ('subject', 'category')
+        ordering = ["-id"]
     description = models.TextField(null = True, blank = True)
     category = models.ForeignKey(Category, on_delete = models.SET_NULL, null = True )
 

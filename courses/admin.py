@@ -2,7 +2,7 @@ from importlib.resources import path
 from django.contrib import admin
 from django import forms
 from django.utils.html import mark_safe
-from .models import Category, Course, Lesson, Tag
+from .models import Category, Course, Lesson, Tag, User
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django.urls import path
 from django.template.response import TemplateResponse
@@ -63,6 +63,12 @@ class CourseAppAdminSite(admin.AdminSite):
 admin_site = CourseAppAdminSite(name= "Khóa học")
 
 # Register your models here.
-admin_site.register(Category), 
-admin_site.register(Course, CourseAdmin),
-admin_site.register(Lesson, LessonAdmin), 
+# admin_site.register(Category), 
+# admin_site.register(Course, CourseAdmin),
+# admin_site.register(Lesson, LessonAdmin), 
+
+admin.site.register(Course), 
+admin.site.register(Lesson), 
+admin.site.register(Category),
+admin.site.register(Tag),
+admin.site.register(User),
